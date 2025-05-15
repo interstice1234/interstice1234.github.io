@@ -1,0 +1,39 @@
+---
+
+/**
+ * Logo Component
+ *
+ * @description Logo description
+ */
+interface Props {
+  /**
+   * Whether to load the image eagerly or lazily
+   * @default 'eager'
+   */
+  loading?: 'eager' | 'lazy'
+}
+
+const { loading = 'eager' }: Props = Astro.props
+---
+
+<a href="/" class="flex items-center gap-2 !no-underline">
+  <span class="logo-text">Stephen Christopher</span>
+</a>
+
+<style lang="scss">
+@font-face {
+  font-family: 'Conquer';
+  src: url('/fonts/Conquer.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.logo-text {
+  font-family: 'Conquer', serif;
+  font-size: 1.25rem;
+  color: var(--foreground-color);
+  font-weight: normal;
+}
+a {
+  color: var(--foreground-color);
+}
+</style>

@@ -1,0 +1,59 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Hero from '@components/Hero.astro'
+import Feature from '@components/Feature.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="mt-16 mb-32">
+    <div class="container">
+     <div class="academic-highlights-grid grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <a href="teaching" class="feature-link" aria-label="Go to Teaching page">
+  <Feature class="academic-feature-card" icon="lucide:book-open" title="Teaching" color="var(--brand-sage)">
+    Courses taught at 9 universities worldwide, specializing in anthropology and Asian religions.
+  </Feature>
+</a>
+<a href="research" class="feature-link" aria-label="Go to Research page">
+  <Feature class="academic-feature-card" icon="lucide:globe" title="Research" color="var(--brand-sage)">
+    Research on Himalayan tribes, Tibetan diaspora, and new religiosity in India, Japan, and Vietnam.
+  </Feature>
+</a>
+<a href="https://www.newreligiosity.org/" class="feature-link" target="_blank" rel="noopener" aria-label="Open Major Project in new tab">
+  <Feature class="academic-feature-card" icon="lucide:database" title="Major Project" color="var(--brand-sage)">
+    Major grant project: building the world’s largest open-access database on new religiosity.
+  </Feature>
+</a>
+<a href="services" class="feature-link" aria-label="Go to Editing & Consulting section">
+  <Feature class="academic-feature-card" icon="lucide:edit-3" title="Editing & Consulting" color="var(--brand-sage)">
+    Professional editing and consulting for academic publications, grants, and research projects.
+  </Feature>
+</a>
+<a href="publications" class="feature-link" aria-label="Go to Publications page">
+  <Feature class="academic-feature-card" icon="lucide:file-text" title="Publications" color="var(--brand-sage)">
+    Publications include peer-reviewed articles, book chapters, and public scholarship in religion.
+  </Feature>
+</a>
+<a href="services#grants" class="feature-link" aria-label="Go to Grants & Awards section in Services">
+  <Feature class="academic-feature-card" icon="lucide:award" title="Grants & Awards" color="var(--brand-sage)">
+    Recipient of Fulbright, Templeton, and international awards for research and academic excellence.
+  </Feature>
+</a>
+      </div>
+    </div>
+  </section>
+<style>
+  .feature-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+  }
+  .feature-link:visited {
+    color: inherit;
+  }
+  .feature-link:focus {
+    outline: 2px solid var(--brand-peach);
+    outline-offset: 2px;
+  }
+</style>
+</DefaultLayout>
