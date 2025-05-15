@@ -19,7 +19,7 @@ interface Props {
 
 <section class="hero mt-24 mb-32">
   <div class="container">
-    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+    <div class="grid grid-cols-1 items-stretch gap-14 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="hero-title">Stephen Christopher</h1>
         <h2 class="hero-subtitle">Anthropologist of Religion</h2>
@@ -37,15 +37,17 @@ interface Props {
           </a>
         </div>
       </div>
-      <Image
-        class="lg:block hero-img mx-auto lg:ml-auto lg:mr-0"
-        src="/portrait.jpg"
-        alt="Portrait of Stephen Christopher"
-        decoding="async"
-        width={520}
-        height={520}
-        loading="eager"
-      />
+      <div class="flex items-end justify-center h-full">
+        <Image
+          class="lg:block hero-img mx-auto lg:ml-auto lg:mr-0"
+          src="/portrait.jpg"
+          alt="Portrait of Stephen Christopher"
+          decoding="async"
+          width={680}
+          height={680}
+          loading="eager"
+        />
+      </div>
     </div>
   </div>
 </section>
